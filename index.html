@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prata Express | Acessórios em Corrente de Prata</title>
+    <meta
+      name="description"
+      content="Loja automatizada de acessórios em corrente de prata com pedidos rápidos via Pix e fornecedores reais para reposição."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content container">
+        <p class="badge">Loja automatizada</p>
+        <h1>Venda de acessórios em corrente de prata com recebimento via Pix</h1>
+        <p>
+          Catálogo pronto para vender, cálculo automático de pedido e finalização rápida via
+          Pix <strong id="pix-key">06750938302</strong>.
+        </p>
+        <div class="hero__actions">
+          <button id="copyPixBtn" class="btn btn--primary">Copiar chave Pix</button>
+          <a class="btn btn--ghost" href="#catalogo">Ver catálogo</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section setup">
+        <div class="section__header">
+          <h2>Configuração rápida (faça 1x)</h2>
+          <p>Preencha seus dados e salve. O site guarda no seu navegador automaticamente.</p>
+        </div>
+        <form id="setupForm" class="setup__form">
+          <label>
+            Chave Pix
+            <input id="pixInput" type="text" placeholder="Ex.: 06750938302" required />
+          </label>
+          <label>
+            WhatsApp de vendas (somente números com DDI)
+            <input id="whatsappInput" type="text" placeholder="Ex.: 5511999999999" required />
+          </label>
+          <button type="submit" class="btn btn--primary">Salvar configuração</button>
+          <p id="setupMessage" class="setup__message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="catalogo" class="section">
+        <div class="section__header">
+          <h2>Produtos em destaque</h2>
+          <p>Escolha os itens e gere pedido automático com total calculado em tempo real.</p>
+        </div>
+        <div id="productGrid" class="grid"></div>
+      </section>
+
+      <section class="section checkout">
+        <div>
+          <h2>Resumo do pedido</h2>
+          <p id="orderSummary">Nenhum item selecionado.</p>
+          <p class="checkout__total">
+            Total: <strong id="totalValue">R$ 0,00</strong>
+          </p>
+        </div>
+        <div class="checkout__actions">
+          <button id="generateOrderBtn" class="btn btn--primary">Gerar pedido no WhatsApp</button>
+          <button id="copyPixInlineBtn" class="btn btn--ghost">Copiar Pix para pagamento</button>
+        </div>
+      </section>
+
+      <section class="section howto">
+        <div class="section__header">
+          <h2>Como usar</h2>
+        </div>
+        <ol>
+          <li>Preencha Pix e WhatsApp em “Configuração rápida” e clique em salvar.</li>
+          <li>Clique em “Adicionar ao pedido” nos produtos que o cliente escolher.</li>
+          <li>Use “Gerar pedido no WhatsApp” para abrir a mensagem pronta com total.</li>
+          <li>Receba o pagamento no Pix e confirme o envio ao cliente.</li>
+        </ol>
+      </section>
+
+      <section class="section suppliers">
+        <div class="section__header">
+          <h2>Fornecedores reais para reposição</h2>
+          <p>
+            Empresas conhecidas no mercado de prata para você validar catálogo, prazo e CNPJ antes
+            de fechar parceria.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <strong>Prata Fina</strong> — atacado em prata 925.
+            <a href="https://www.pratafina.com.br" target="_blank" rel="noopener noreferrer"
+              >Visitar site</a
+            >
+          </li>
+          <li>
+            <strong>Balbino Joias</strong> — distribuidora de joias em prata.
+            <a href="https://www.balbinojoias.com.br" target="_blank" rel="noopener noreferrer"
+              >Visitar site</a
+            >
+          </li>
+          <li>
+            <strong>Prata e Arte</strong> — correntes e acessórios em prata.
+            <a href="https://www.prataearte.com.br" target="_blank" rel="noopener noreferrer"
+              >Visitar site</a
+            >
+          </li>
+        </ul>
+        <small>
+          Dica: sempre valide CNPJ, reputação e política de troca antes de importar seu estoque.
+        </small>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Prata Express © <span id="year"></span> • Checkout via Pix: <span id="footerPix">06750938302</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
